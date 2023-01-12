@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#FFF"/>
+    <title>Snake game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="manifest.json" />
+    <script>
+        if('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/snake/sw.js')
+            // .then(() => {
+            //     console.log('Service Worker registered');
+            // })
+        }
+    </script>
+</head>
+<body>
+    <div id="game-over-screen">
+        <p>Game Over !</p>
+        <button id="reload-btn">Rejouer</button>
+    </div>
+    <p>Score: <span id="score"></span><br /></p>
+    <canvas id="canvas"></canvas>
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+</html>
